@@ -301,6 +301,7 @@
             android:text="Basic"
             android:layout_gravity="center"
             android:onClick="changeMode"
+            android:textStyle="bold"
             />
 
         <RadioButton
@@ -310,13 +311,14 @@
             android:text="Formula"
             android:layout_gravity="center"
             android:onClick="changeMode"
+            android:textStyle="bold"
             />
     </RadioGroup>
 
     <EditText
         android:id="@+id/calcDisplay"
-        android:layout_width="612dp"
-        android:layout_height="55dp"
+        android:layout_width="511dp"
+        android:layout_height="53dp"
         android:layout_marginTop="5dp"
         android:background="@drawable/screen_border"
         android:editable="false"
@@ -327,6 +329,7 @@
         android:textAlignment="textEnd"
         android:textSize="32dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.29"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
