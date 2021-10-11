@@ -10,15 +10,12 @@
     tools:context=".MainActivity">
 
     <TableLayout
-        android:id="@+id/tableLayout"
-        android:layout_width="515dp"
+        android:id="@+id/buttonTable"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.29"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calcDisplay"
-        app:layout_constraintVertical_bias="0.24000001">
+        app:layout_constraintTop_toBottomOf="@+id/calcDisplay">
 
         <TableRow
             android:layout_width="match_parent"
@@ -283,41 +280,39 @@
     </TableLayout>
 
     <RadioGroup
-        android:layout_width="147dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tableLayout"
-        app:layout_constraintTop_toTopOf="parent"
-        >
+        app:layout_constraintHorizontal_bias="0.10"
+        app:layout_constraintStart_toEndOf="@+id/buttonTable"
+        app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
             android:id="@+id/basicRadio"
-            android:layout_width="wrap_content"
+            android:layout_width="84dp"
             android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="Basic"
             android:layout_gravity="center"
+            android:checked="true"
             android:onClick="changeMode"
-            android:textStyle="bold"
-            />
+            android:text="Basic"
+            android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/formulaRadio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Formula"
             android:layout_gravity="center"
             android:onClick="changeMode"
-            android:textStyle="bold"
-            />
+            android:text="Formula"
+            android:textStyle="bold" />
     </RadioGroup>
 
     <EditText
         android:id="@+id/calcDisplay"
-        android:layout_width="511dp"
+        android:layout_width="460dp"
         android:layout_height="53dp"
         android:layout_marginTop="5dp"
         android:background="@drawable/screen_border"
@@ -329,7 +324,7 @@
         android:textAlignment="textEnd"
         android:textSize="32dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.29"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
