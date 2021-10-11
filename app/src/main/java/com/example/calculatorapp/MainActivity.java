@@ -28,10 +28,6 @@ public class MainActivity extends AppCompatActivity {
     RadioButton basicRadio;
     RadioButton formulaRadio;
 
-    //Variables for First and Second Operand
-    String firstOperand;
-    String secondOperand;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
         if(basicRadio.isChecked()) mode="Basic";
         else mode="Formula";
         calcDisplay.setText("");
-        String announcement = "Changed to "+mode+" mode";
-        Toast.makeText(this, announcement, Toast.LENGTH_SHORT).show();
+        String msg = "Changed Calculator to "+mode+" mode";
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 
     public void pressInputKey(View view){
@@ -65,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         String oldValue = calcDisplay.getText().toString();
         char incomingInput=bText.charAt(0);
 
+        //Ignore Error Message in Calculation
         if(oldValue.equals("Error")) oldValue="";
 
         //Checks to deal with duplicate operator and double operators
@@ -97,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
             }
+            //Allow for negative sign as initial input if Formula Mode is Active
             else if(formulaRadio.isChecked()&&incomingInput == '-'){
                 calcDisplay.setText(bText);
             }
@@ -104,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
                 return;
             }
         }
+        //Set Input in Calculator Display
         if(!lastValIsOper || replaceOper) {
             if(replaceOper){
                 oldValue = oldValue.substring(0, oldValue.length() - 1);
