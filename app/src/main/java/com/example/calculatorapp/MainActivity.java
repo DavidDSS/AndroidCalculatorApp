@@ -12,6 +12,13 @@ import android.widget.Toast;
 
 import org.mariuszgromada.math.mxparser.*;
 
+//Reference:
+//Math Parser used in this application to perform basic math calculations:
+//MXparser – math expressions parser for Java Android C# .NET/mono/xamarin –
+//mathematical formula parser / evaluator library. mXparser – Math Expressions Parser for
+//JAVA Android C# .NET/MONO/Xamarin – Mathematical Formula Parser / Evaluator Library. (n.d.).
+//Retrieved October 11, 2021, from https://mathparser.org/.
+
 public class MainActivity extends AppCompatActivity {
 
     //Variable that holds calculator display
@@ -115,7 +122,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void pressEqual(View view){
-        //Obtain the expression for the calculator display in string form
+
+        //Obtain the expression for the calculator display in string
+        //form using the library referenced at the beginning of the class
         String expression= calcDisplay.getText().toString();
 
         //Use the parser library to obtain the answer of the expression
