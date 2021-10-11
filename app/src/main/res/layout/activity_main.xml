@@ -29,36 +29,25 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:height="75dp"
-                android:background="@drawable/black_border"
+                android:background="@drawable/function_buttons"
                 android:onClick="clearScreen"
-                android:text="C"
-                android:textColor="@color/black" />
+                android:text="Clear"
+                android:textSize="15dp"
+                android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/parenthesisBtn"
+                android:id="@+id/delete"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:height="75dp"
-                android:background="@drawable/black_border"
-                android:onClick="pressParentheses"
-                android:text="( )"
-                android:textColor="@color/black" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/powerBtn"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_weight="1"
-                android:height="75dp"
-                android:background="@drawable/black_border"
-                android:onClick="pressInputKey"
-                android:text="^"
-                android:textColor="@color/black" />
+                android:background="@drawable/function_buttons"
+                android:onClick="deleteInput"
+                android:text="Delete"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/divideBtn"
@@ -68,10 +57,31 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:height="75dp"
-                android:background="@drawable/black_border"
+                android:background="@drawable/function_buttons"
                 android:onClick="pressInputKey"
                 android:text="/"
-                android:textColor="@color/black" />
+                android:textSize="20dp"
+                android:textColor="@color/white" />
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <RadioButton android:id="@+id/basicRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Basic"
+                    android:checked="true"
+                    android:onClick="changeMode"
+                    />
+                <RadioButton android:id="@+id/formulaRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Formula"
+                    android:onClick="changeMode"
+                    />
+            </RadioGroup>
         </TableRow>
 
         <TableRow
@@ -89,6 +99,7 @@
                 android:background="@drawable/black_border"
                 android:onClick="pressInputKey"
                 android:text="7"
+                android:textSize="20dp"
                 android:textColor="@color/black" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -102,6 +113,7 @@
                 android:background="@drawable/black_border"
                 android:onClick="pressInputKey"
                 android:text="8"
+                android:textSize="20dp"
                 android:textColor="@color/black" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -115,6 +127,7 @@
                 android:background="@drawable/black_border"
                 android:onClick="pressInputKey"
                 android:text="9"
+                android:textSize="20dp"
                 android:textColor="@color/black" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -125,10 +138,11 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:height="75dp"
-                android:background="@drawable/black_border"
+                android:background="@drawable/function_buttons"
                 android:onClick="pressInputKey"
                 android:text="*"
-                android:textColor="@color/black" />
+                android:textSize="20dp"
+                android:textColor="@color/white" />
         </TableRow>
 
         <TableRow
@@ -146,6 +160,7 @@
                 android:background="@drawable/black_border"
                 android:onClick="pressInputKey"
                 android:text="4"
+                android:textSize="20dp"
                 android:textColor="@color/black" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -159,6 +174,7 @@
                 android:background="@drawable/black_border"
                 android:onClick="pressInputKey"
                 android:text="5"
+                android:textSize="20dp"
                 android:textColor="@color/black" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -172,6 +188,7 @@
                 android:background="@drawable/black_border"
                 android:onClick="pressInputKey"
                 android:text="6"
+                android:textSize="20dp"
                 android:textColor="@color/black" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -182,10 +199,11 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:height="75dp"
-                android:background="@drawable/black_border"
+                android:background="@drawable/function_buttons"
                 android:onClick="pressInputKey"
                 android:text="+"
-                android:textColor="@color/black" />
+                android:textSize="20dp"
+                android:textColor="@color/white" />
         </TableRow>
 
         <TableRow
@@ -203,6 +221,7 @@
                 android:background="@drawable/black_border"
                 android:onClick="pressInputKey"
                 android:text="1"
+                android:textSize="20dp"
                 android:textColor="@color/black" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -216,6 +235,7 @@
                 android:background="@drawable/black_border"
                 android:onClick="pressInputKey"
                 android:text="2"
+                android:textSize="20dp"
                 android:textColor="@color/black" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -229,6 +249,7 @@
                 android:background="@drawable/black_border"
                 android:onClick="pressInputKey"
                 android:text="3"
+                android:textSize="20dp"
                 android:textColor="@color/black" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -239,28 +260,16 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:height="75dp"
-                android:background="@drawable/black_border"
+                android:background="@drawable/function_buttons"
                 android:onClick="pressInputKey"
                 android:text="-"
-                android:textColor="@color/black" />
+                android:textSize="20dp"
+                android:textColor="@color/white" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/nothingOne"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:height="75dp"
-                android:layout_margin="10dp"
-                android:onClick="pressInputKey"
-                android:background="@drawable/black_border"
-                android:text="!"
-                android:textColor="@color/black" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/zeroBtn"
@@ -273,20 +282,22 @@
                 android:background="@drawable/black_border"
                 android:onClick="pressInputKey"
                 android:text="0"
+                android:textSize="20dp"
                 android:textColor="@color/black" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/dotBtn"
+                android:id="@+id/powerBtn"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:height="75dp"
-                android:layout_margin="10dp"
-                android:background="@drawable/black_border"
-                android:text="."
+                android:background="@drawable/function_buttons"
                 android:onClick="pressInputKey"
-                android:textColor="@color/black" />
+                android:text="^"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/equalsBtn"
@@ -296,25 +307,28 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:height="75dp"
-                android:background="@drawable/black_border"
+                android:background="@drawable/function_buttons"
                 android:onClick="pressEqual"
                 android:text="="
-                android:textColor="@color/black" />
+                android:textSize="20dp"
+                android:textColor="@color/white" />
         </TableRow>
     </TableLayout>
 
     <EditText
         android:id="@+id/calcDisplay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:background="@drawable/screen_border"
         android:padding="15dp"
-        android:textAlignment="textEnd"
         android:textSize="42dp"
-        android:height="80dp"
+        android:background="@drawable/screen_border"
+        android:textAlignment="textEnd"
         android:singleLine="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:scrollHorizontally="true"
+        android:inputType="none"
+        android:editable="false"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
