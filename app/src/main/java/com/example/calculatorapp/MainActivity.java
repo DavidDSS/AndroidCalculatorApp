@@ -65,10 +65,10 @@ public class MainActivity extends AppCompatActivity {
         if(oldValue.equals("Error")) oldValue="";
 
         //Checks to deal with duplicate operator and double operators
-        if(incomingInput=='+' || incomingInput == '-' || incomingInput == '*' || incomingInput == '/' || incomingInput == '^' || incomingInput == '!') {
+        if(incomingInput=='+' || incomingInput == '-' || incomingInput == '*' || incomingInput == '/' || incomingInput == '^') {
             if (oldValue.length() != 0) {
                 char lastValue = oldValue.charAt(oldValue.length() - 1);
-                if (lastValue == '+' || lastValue == '-' || lastValue == '*' || lastValue == '/' || lastValue == '^' || lastValue == '!') {
+                if (lastValue == '+' || lastValue == '-' || lastValue == '*' || lastValue == '/' || lastValue == '^') {
                     lastValIsOper = true;
                 }
                 if((incomingInput!=lastValue)&&lastValIsOper){
@@ -81,8 +81,7 @@ public class MainActivity extends AppCompatActivity {
                         oldValue.contains(Character.toString('-'))||
                         oldValue.contains(Character.toString('/'))||
                         oldValue.contains(Character.toString('*'))||
-                        oldValue.contains(Character.toString('^'))||
-                        oldValue.contains(Character.toString('!'))) doCalc = true;
+                        oldValue.contains(Character.toString('^'))) doCalc = true;
 
                 //Calculation needs to be made in basic mode
                 if(doCalc && !lastValIsOper && basicRadio.isChecked()){

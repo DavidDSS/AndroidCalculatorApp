@@ -299,7 +299,8 @@
             android:checked="true"
             android:onClick="changeMode"
             android:text="Basic"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
 
         <RadioButton
             android:id="@+id/formulaRadio"
@@ -308,7 +309,8 @@
             android:layout_gravity="center"
             android:onClick="changeMode"
             android:text="Formula"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
     </RadioGroup>
 
     <EditText
@@ -327,6 +329,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.27"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/black"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
